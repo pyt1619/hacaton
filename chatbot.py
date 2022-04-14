@@ -60,8 +60,8 @@ def getText(url, type, message):
             if(gpa!=''):
                 bot.send_message(message.chat.id,  "Средний балл", reply_markup=types.ReplyKeyboardRemove())
                 bot.send_message(message.chat.id,  gpa, reply_markup=keyboard1)
-            bot.send_message(message.chat.id,  "Средний балл", reply_markup=keyboard1)
-            
+            bot.send_message(message.chat.id,  "Выберите другой номер колледжа чтобы вывести информацию о нем", reply_markup=keyboard1)
+
             break
 
 keyboard1 = types.ReplyKeyboardMarkup()
