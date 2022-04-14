@@ -46,16 +46,6 @@ def getText(url, type, message):
         except:
             pass
         if(title!=''):
-            # if(type == 1):
-            #     return title
-            # if(type == 2):
-            #     return metro
-            # if(type == 3):
-            #     return description
-            # if(type == 4):
-            #     return info
-            # if(type == 5):
-            #     return gpa
             bot.send_message(message.chat.id,  "Название", reply_markup=types.ReplyKeyboardRemove())
             bot.send_message(message.chat.id,  title, reply_markup=keyboard1)
             if(metro!=''):
@@ -68,7 +58,7 @@ def getText(url, type, message):
                 bot.send_message(message.chat.id,  "Описание", reply_markup=types.ReplyKeyboardRemove())
                 bot.send_message(message.chat.id,  info, reply_markup=keyboard1)
             if(gpa!=''):
-                bot.send_message(message.chat.id,  "Средний бал", reply_markup=types.ReplyKeyboardRemove())
+                bot.send_message(message.chat.id,  "Средний балл", reply_markup=types.ReplyKeyboardRemove())
                 bot.send_message(message.chat.id,  gpa, reply_markup=keyboard1)
             break
 
