@@ -60,6 +60,8 @@ def getText(url, type, message):
             if(gpa!=''):
                 bot.send_message(message.chat.id,  "Средний балл", reply_markup=types.ReplyKeyboardRemove())
                 bot.send_message(message.chat.id,  gpa, reply_markup=keyboard1)
+            bot.send_message(message.chat.id,  "Средний балл", reply_markup=keyboard1)
+            
             break
 
 keyboard1 = types.ReplyKeyboardMarkup()
@@ -68,7 +70,7 @@ with open('names.txt', 'r') as f:
     names = f.read().splitlines()
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Здравсвуйте. Я могу помочь с выбором колледжа для вас', reply_markup=keyboard1)
+    bot.send_message(message.chat.id, 'Здравсвуйте.\nЯ могу помочь с выбором колледжа для вас', reply_markup=keyboard1)
 @bot.message_handler(content_types=['text'])
 def send_text(message):
     if(message.text.lower() == 'вывести список колледжей'):
